@@ -1,0 +1,42 @@
+
+// 在manifest中追加screenOrientation属性到Activity标签中 ,适用于AGP 7+
+android {
+
+    project.afterEvaluate {
+        def isApplicationPlugin = plugins.hasPlugin('com.android.application')
+        def variantApi = plugins.hasPlugin('com.android.application') ? applicationVariants : libraryVariants
+        variantApi.all { variant ->
+            String variantName = variant.name.capitalize()
+            def processManifestTask = project.tasks.getByName("process${variantName}Manifest")
+            processManifestTask.doLast { pmt ->
+                String manifestPath = ""
+                if(isApplicationPlugin){
+                     manifestPath = "${buildDir}\\intermediates\\merged_manifests\\${variant.name}\\AndroidManifest.xml"  //3.6
+                }else{
+                    manifestPath = "${buildDir}\\intermediates\\merged_manifest\\${variant.name}\\AndroidManifest.xml"  //3.6
+                }
+                var manifestFile = file(manifestPath)
+                if (manifestFile.exists()) {
+                    def xml = new XmlParser(false, false).parse(manifestFile)
+                    xml.application.each { application ->
+                        application.'activity'.each { activity ->
+                            def nameAttribute = activity.attributes().get('android:name')
+                            if (!activity.attributes().containsKey('android:screenOrientation')) {
+                                if (nameAttribute) {
+                                    println("变体 ${variant.name} 中追加screenOrientation 到 Activity : ${nameAttribute}")
+                                }
+                                activity.attributes().put('android:screenOrientation', 'portrait')
+                            }
+                        }
+                    }
+                    // Write the modified XML back to the file
+                    def printer = new XmlNodePrinter(new PrintWriter(new FileWriter(manifestFile)))
+                    printer.setPreserveWhitespace(true)
+                    printer.print(xml)
+                } else {
+                    print("manifestPath is not exists")
+                }
+            }
+        }
+    }
+}

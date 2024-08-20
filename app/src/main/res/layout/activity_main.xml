@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="tv0"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="#fd0202"
+            android:gravity="center"
+            android:text="tv1"
+            android:textColor="#ffffff" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv2"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="90dp"-->
+<!--            android:background="@android:color/holo_green_light"-->
+<!--            android:gravity="center"-->
+<!--            android:text="tv2"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv3"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:background="#38fd02"-->
+<!--            android:gravity="center"-->
+<!--            android:text="tv3"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv4"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:background="#02bafd"-->
+<!--            android:gravity="center"-->
+<!--            android:text="tv4"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv5"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:background="#020afd"-->
+<!--            android:gravity="center"-->
+<!--            android:text="tv5"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv6"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:background="@android:color/holo_orange_light"-->
+<!--            android:gravity="center"-->
+<!--            android:text="tv6"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv7"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:background="#00ffff"-->
+<!--            android:gravity="center"-->
+<!--            android:text="tv7"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv8"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="#ff6699"-->
+<!--            android:gravity="center"-->
+<!--            android:text="tv8"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv9"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:background="@android:color/holo_red_light"-->
+<!--            android:gravity="center"-->
+<!--            android:text="tv9"-->
+<!--            android:textColor="#ffffff" />-->
+
+
+    <TextView
+        android:id="@+id/dividerDrawable0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="dividerDrawable: " />
+
+    <!--   showDividerHorizontal  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/dividerDrawable1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ff00ff"
+            android:gravity="center"
+            android:text="dividerDrawableHorizontal"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/dividerDrawable2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#8BC34A"
+            android:gravity="center"
+            android:text="dividerDrawableVertical"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/dividerDrawable3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00BCD4"
+            android:gravity="center"
+            android:text="dividerDrawable"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showDividerHorizontal0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="showDividerHorizontal: 水平分割线" />
+
+    <!--   showDividerHorizontal  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/showDividerHorizontal1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF5722"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_NONE"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/showDividerHorizontal2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_BEGINNING"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/showDividerHorizontal3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_MIDDLE"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/showDividerHorizontal4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_END"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showDividerVertical0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="showDividerVertical: 垂直分割线" />
+
+    <!--   showDividerVertical  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/showDividerVertical1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF5722"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_NONE"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/showDividerVertical2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/purple_200"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_BEGINNING"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/showDividerVertical3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_MIDDLE"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/showDividerVertical4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_END"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/setShowDivider0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="setShowDivider: 水平 + 垂直分割线" />
+
+    <!--   setShowDivider  -->
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/setShowDivider1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF5722"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_NONE"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/setShowDivider2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_BEGINNING"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/setShowDivider3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_MIDDLE"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/setShowDivider4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:text="SHOW_DIVIDER_END"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+<!--<RelativeLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:background="@color/purple_200"-->
+<!--    android:layout_height="wrap_content">-->
+<!--    <com.example.myapplication.CutoutRectangleView-->
+<!--        android:layout_width="match_parent"-->
+<!--       android:layout_centerVertical="true"-->
+<!--        app:halfround_radius="10dp"-->
+<!--        app:halfround_color="@color/black"-->
+<!--        app:rectangle_color1="@color/white"-->
+<!--        android:layout_height="20dp" />-->
+<!--    <com.fang.dashview.DashView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        app:dashWidth="2dp"-->
+<!--        app:lineWidth="4dp"-->
+<!--        app:lineColor="@android:color/holo_green_light"-->
+<!--        app:dashOrientation="0"-->
+<!--        app:lineHeight="1dp"-->
+<!--        />-->
+<!--</RelativeLayout>-->
+
+    <com.example.myapplication.CustomRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:round_radius="10dp"
+        app:round_color="@color/black"
+        app:rectangle_color="@color/white"
+        app:dashWidth1="2dp"
+        app:lineWidth1="4dp"
+        app:lineColor1="@android:color/holo_green_light"
+        app:dashOrientation1="0"
+        app:lineHeight1="1dp"/>
+
+</LinearLayout>
