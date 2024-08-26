@@ -12,14 +12,14 @@ class CustomRelativeLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : RelativeLayout(context, attrs, defStyleAttr) {
 
-     var cutoutRectangleView: CutoutRectangleView
+     var mGapDottedLine: GapDottedLine
      var dashView: DashView
 
     init {
         // Inflate and add the layout
         inflate(context, R.layout.custom_relative_layout, this)
 
-        cutoutRectangleView = findViewById(R.id.cutoutRectangleView)
+        mGapDottedLine = findViewById(R.id.cutoutRectangleView)
         dashView = findViewById(R.id.dashView)
 
         // Load custom attributes
@@ -27,11 +27,11 @@ class CustomRelativeLayout @JvmOverloads constructor(
 
         val roundRadius = a.getDimension(R.styleable.CustomRelativeLayout_round_radius, 0f)
         val roundColor = a.getColor(R.styleable.CustomRelativeLayout_round_color, Color.BLACK)
-        val rectangleColor = a.getColor(R.styleable.CustomRelativeLayout_rectangle_color, Color.WHITE)
+//        val rectangleColor = a.getColor(R.styleable.CustomRelativeLayout_rectangle_color, Color.WHITE)
 
-        cutoutRectangleView.mRoundColor=roundRadius.toInt()
-        cutoutRectangleView.mRoundColor=roundColor
-        cutoutRectangleView.mRectangleColor=rectangleColor
+        mGapDottedLine.mRoundColor=roundRadius.toInt()
+        mGapDottedLine.mRoundColor=roundColor
+//        mGapDottedLine.mRectangleColor=rectangleColor
 
         val dashWidth = a.getDimension(R.styleable.CustomRelativeLayout_dashWidth1, 0f)
         val lineWidth = a.getDimension(R.styleable.CustomRelativeLayout_lineWidth1, 0f)

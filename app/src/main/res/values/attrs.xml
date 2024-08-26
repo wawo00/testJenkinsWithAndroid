@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="HalfRoundDottedLine">
+    <declare-styleable name="GapDottedLine">
         <attr name="halfround_radius" format="dimension" />
         <attr name="halfround_color" format="color" />
-        <attr name="rectangle_color1" format="color" />
+        <attr name="rectangle_color" format="color" />
+        <attr name="mt_dashWidth" format="dimension"/>
+        <attr name="mt_lineWidth" format="dimension"/>
+        <attr name="mt_lineHeight" format="dimension"/>
+        <attr name="mt_lineColor" format="color"/>
+        <attr name="mt_dashOrientation" format="integer"/>
     </declare-styleable>
     <declare-styleable name="CustomRelativeLayout">
         <attr name="round_radius" format="dimension" />
         <attr name="round_color" format="color" />
-        <attr name="rectangle_color" format="color" />
+        <attr name="rectangle_color1" format="color" />
         <attr name="dashWidth1" format="dimension" />
         <attr name="lineWidth1" format="dimension" />
         <attr name="lineColor1" format="color" />
         <attr name="dashOrientation1" format="integer" />
         <attr name="lineHeight1" format="dimension" />
     </declare-styleable>
-    <declare-styleable name="DashView">
-        <attr name="dashWidth" format="dimension"/>
-        <attr name="lineWidth" format="dimension"/>
-        <attr name="lineHeight" format="dimension"/>
-        <attr name="lineColor" format="color"/>
-        <attr name="dashOrientation" format="integer"/>
+<!--    <declare-styleable name="DashView">-->
+<!--        <attr name="dashWidth" format="dimension"/>-->
+<!--        <attr name="lineWidth" format="dimension"/>-->
+<!--        <attr name="lineHeight" format="dimension"/>-->
+<!--        <attr name="lineColor" format="color"/>-->
+<!--        <attr name="dashOrientation" format="integer"/>-->
 
-    </declare-styleable>
+<!--    </declare-styleable>-->
 </resources>

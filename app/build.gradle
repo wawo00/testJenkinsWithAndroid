@@ -24,11 +24,11 @@ android {
 
     productFlavors {
         uat {
-            applicationId "com.mst.businesstravel.test"
+            applicationId "com.demo.businesstravel.test"
 
         }
         sit {
-            applicationId "com.mst.businesstravel.test"
+            applicationId "com.demo.businesstravel.sit"
         }
 
     }

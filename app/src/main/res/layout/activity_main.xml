@@ -6,7 +6,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
-
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <TextView
+        android:id="@+id/tv999"
+        android:layout_width="25dp"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_purple"
+        android:gravity="center"
+        android:text="tv0"
+        android:textColor="#ffffff" />
+    <TextView
+        android:id="@+id/tv999s"
+        android:layout_width="25px"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_purple"
+        android:gravity="center"
+        android:text="tv0"
+        android:textColor="#ffffff" />
         <TextView
             android:id="@+id/tv0"
             android:layout_width="60dp"
@@ -305,17 +321,23 @@
             android:textColor="@android:color/white" />
 
     </LinearLayout>
-<!--<RelativeLayout-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:background="@color/purple_200"-->
-<!--    android:layout_height="wrap_content">-->
-<!--    <com.example.myapplication.CutoutRectangleView-->
-<!--        android:layout_width="match_parent"-->
-<!--       android:layout_centerVertical="true"-->
-<!--        app:halfround_radius="10dp"-->
-<!--        app:halfround_color="@color/black"-->
-<!--        app:rectangle_color1="@color/white"-->
-<!--        android:layout_height="20dp" />-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:background="@color/purple_200"
+    android:layout_height="wrap_content">
+    <com.example.myapplication.GapDottedLine
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        app:halfround_radius="7dp"
+        app:halfround_color="@android:color/transparent"
+        app:rectangle_color="@color/white"
+        android:layout_marginHorizontal="12dp"
+        app:mt_dashOrientation="0"
+        app:mt_lineHeight="1dp"
+        app:mt_lineWidth="6dp"
+        app:mt_dashWidth="5.5dp"
+        app:mt_lineColor="@color/black"
+        android:layout_height="14dp" />
 <!--    <com.fang.dashview.DashView-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="match_parent"-->
@@ -327,18 +349,18 @@
 <!--        app:dashOrientation="0"-->
 <!--        app:lineHeight="1dp"-->
 <!--        />-->
-<!--</RelativeLayout>-->
+</RelativeLayout>
 
-    <com.example.myapplication.CustomRelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        app:round_radius="10dp"
-        app:round_color="@color/black"
-        app:rectangle_color="@color/white"
-        app:dashWidth1="2dp"
-        app:lineWidth1="4dp"
-        app:lineColor1="@android:color/holo_green_light"
-        app:dashOrientation1="0"
-        app:lineHeight1="1dp"/>
+<!--    <com.example.myapplication.CustomRelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="20dp"-->
+<!--        app:round_radius="10dp"-->
+<!--        app:round_color="@color/black"-->
+<!--        app:rectangle_color="@color/white"-->
+<!--        app:dashWidth1="2dp"-->
+<!--        app:lineWidth1="4dp"-->
+<!--        app:lineColor1="@android:color/holo_green_light"-->
+<!--        app:dashOrientation1="0"-->
+<!--        app:lineHeight1="1dp"/>-->
 
 </LinearLayout>

@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
@@ -43,15 +42,15 @@ public class DashView extends View {
 
     public DashView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.DashView);
-        dashWidth = typedArray.getDimension(R.styleable.DashView_dashWidth,DEFAULT_DASH_WIDTH);
-        lineHeight = typedArray.getDimension(R.styleable.DashView_lineHeight, DEFAULT_LINE_HEIGHT);
-        lineWidth = typedArray.getDimension(R.styleable.DashView_lineWidth, DEFAULT_LINE_WIDTH);
-        lineColor = typedArray.getColor(R.styleable.DashView_lineColor, DEFAULT_LINE_COLOR);
-        dashOrientation = typedArray.getInteger(R.styleable.DashView_dashOrientation,DEFAULT_DASH_ORIENTATION);
+//        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.DashView);
+//        dashWidth = typedArray.getDimension(R.styleable.DashView_dashWidth,DEFAULT_DASH_WIDTH);
+//        lineHeight = typedArray.getDimension(R.styleable.DashView_lineHeight, DEFAULT_LINE_HEIGHT);
+//        lineWidth = typedArray.getDimension(R.styleable.DashView_lineWidth, DEFAULT_LINE_WIDTH);
+//        lineColor = typedArray.getColor(R.styleable.DashView_lineColor, DEFAULT_LINE_COLOR);
+//        dashOrientation = typedArray.getInteger(R.styleable.DashView_dashOrientation,DEFAULT_DASH_ORIENTATION);
         mPaint.setColor(lineColor);
         mPaint.setStrokeWidth(lineHeight);
-        typedArray.recycle();
+//        typedArray.recycle();
     }
 
     @Override
