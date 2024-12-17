@@ -1,111 +1,48 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.webkit.WebView
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.util.Log
+import android.view.View
 import androidx.activity.ComponentActivity
-import com.example.myapplication1.MainActivityModule2
-import com.example.myapplication2.MainActivityModule1
+import androidx.lifecycle.MutableLiveData
 
 
 class MainActivity : ComponentActivity() {
     val TAG = "roywan"
-    private val webView: WebView? = null
-    private val progressBar: ProgressBar? = null
-    private val txtCommonTitle: TextView? = null
+     var param=MutableLiveData<HotelListRequestParams>()
 
-    private val url = "http://q.huijingcai.top/b/pay?payOrderNo=21100811012001970631000501060"
-    private val title = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Handler().postDelayed({
-                        startActivity(Intent(this, MainActivityModule1::class.java))
-                    }
-                    , 3000)
+            param.value=HotelListRequestParams(
+            isMapSearch = false,
+            arrivalDate = "2024-12-16",
+            departureDate = "2024-12-17",
+            location = null,
+            cityId = "201",
+            cityName = "青岛",
+            filterTypes = arrayListOf(FilterType("位置"),FilterType("区域"),FilterType("筛选项")),
+            sortTypeName = "距离最近"
+        )
 
-        Handler().postDelayed({
-            startActivity(Intent(this, MainActivityModule2::class.java))
+        // 观察 LiveData 数据的变化
+        param.observe(this) { updatedParams ->
+            // 这里可以更新 UI，例如：
+            Log.d(TAG, "Updated HotelListRequestParams: $updatedParams")
         }
-            , 6000)
     }
 
-//    private fun initFlexLayout() {
-//        findViewById<TextView>(R.id.dividerDrawable1).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).dividerDrawableHorizontal = resources.getDrawable(R.drawable.divider1)
-//            findViewById<TextView>(R.id.dividerDrawable0).text = "dividerDrawableHorizontal"
-//            Toast.makeText(this, "dividerDrawableHorizontal", Toast.LENGTH_SHORT).show()
-//        }
-//        findViewById<TextView>(R.id.dividerDrawable2).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).dividerDrawableVertical = resources.getDrawable(R.drawable.divider2)
-//            findViewById<TextView>(R.id.dividerDrawable0).text = "dividerDrawableVertical"
-//        }
-//        findViewById<TextView>(R.id.dividerDrawable3).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).setDividerDrawable(resources.getDrawable(R.drawable.divider3))
-//            findViewById<TextView>(R.id.dividerDrawable0).text = "findViewById<TextView>(R.id.dividerDrawable"
-//        }
-//
-//        //水平
-//        findViewById<TextView>(R.id.showDividerHorizontal1).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).showDividerHorizontal = FlexboxLayout.SHOW_DIVIDER_NONE
-//            findViewById<TextView>(R.id.showDividerHorizontal0).text = "水平分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_NONE"
-//        }
-//        findViewById<TextView>(R.id.showDividerHorizontal2).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).showDividerHorizontal = FlexboxLayout.SHOW_DIVIDER_BEGINNING
-//            findViewById<TextView>(R.id.showDividerHorizontal0).text = "水平分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_BEGINNING"
-//        }
-//        findViewById<TextView>(R.id.showDividerHorizontal3).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).showDividerHorizontal = FlexboxLayout.SHOW_DIVIDER_MIDDLE
-//            findViewById<TextView>(R.id.showDividerHorizontal0).text = "水平分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_MIDDLE"
-//        }
-//        findViewById<TextView>(R.id.showDividerHorizontal4).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).showDividerHorizontal = FlexboxLayout.SHOW_DIVIDER_END
-//            findViewById<TextView>(R.id.showDividerHorizontal0).text = "水平分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_END"
-//        }
-//
-//        //垂直
-//        findViewById<TextView>(R.id.showDividerVertical1).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).showDividerVertical = FlexboxLayout.SHOW_DIVIDER_NONE
-//            findViewById<TextView>(R.id.showDividerVertical0).text = "垂直分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_NONE"
-//        }
-//        findViewById<TextView>(R.id.showDividerVertical2).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).showDividerVertical = FlexboxLayout.SHOW_DIVIDER_BEGINNING
-//            findViewById<TextView>(R.id.showDividerVertical0).text = "垂直分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_BEGINNING"
-//        }
-//        findViewById<TextView>(R.id.showDividerVertical3).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).showDividerVertical = FlexboxLayout.SHOW_DIVIDER_MIDDLE
-//            findViewById<TextView>(R.id.showDividerVertical0).text = "垂直分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_MIDDLE"
-//        }
-//        findViewById<TextView>(R.id.showDividerVertical4).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).showDividerVertical = FlexboxLayout.SHOW_DIVIDER_END
-//            findViewById<TextView>(R.id.showDividerVertical0).text = "垂直分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_END"
-//        }
-//
-//        //水平+垂直
-//        findViewById<TextView>(R.id.setShowDivider1).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).setShowDivider(FlexboxLayout.SHOW_DIVIDER_NONE)
-//            findViewById<TextView>(R.id.setShowDivider0).text = "水平 + 垂直分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_NONE"
-//        }
-//        findViewById<TextView>(R.id.setShowDivider2).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).setShowDivider(FlexboxLayout.SHOW_DIVIDER_BEGINNING)
-//            findViewById<TextView>(R.id.setShowDivider0).text = "水平 + 垂直分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_BEGINNING"
-//        }
-//        findViewById<TextView>(R.id.setShowDivider3).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).setShowDivider(FlexboxLayout.SHOW_DIVIDER_MIDDLE)
-//            findViewById<TextView>(R.id.setShowDivider0).text = "水平 + 垂直分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_MIDDLE"
-//        }
-//        findViewById<TextView>(R.id.setShowDivider4).setOnClickListener {
-//            findViewById<FlexboxLayout>(R.id.flexboxLayout).setShowDivider(FlexboxLayout.SHOW_DIVIDER_END)
-//            findViewById<TextView>(R.id.setShowDivider0).text = "水平 + 垂直分割线 : findViewById<TextView>(R.id.SHOW_DIVIDER_END"
-//        }
-//    }
-
-
-
-
+    fun changParam(view: View){
+        Log.i(TAG, "changParam: ")
+        val currentParams = param.value
+        currentParams?.let {
+            // 修改 isMapSearch 为 true
+            val updatedParams = it.copy(isMapSearch = true,filterTypes= it.filterTypes.apply {
+                add(FilterType("价格"))
+            })
+            param.value = updatedParams // 更新 LiveData 的值
+        }
+    }
 }
 
 

@@ -15,4 +15,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "BusinessTravel"
-include ':app',":module1","module2"
+//include ':app',":module1","module2"
+include ':app'
