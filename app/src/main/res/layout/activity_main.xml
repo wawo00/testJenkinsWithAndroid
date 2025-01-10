@@ -15,4 +15,13 @@
         android:layout_height="wrap_content"
         android:onClick="changParam"
         android:text="changeInfo"></Button>
+    <com.example.myapplication.CustomGradientTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="日用"
+        android:textColor="#2A254B"
+        android:textSize="24sp"
+        android:padding="8dp" />
+
 </LinearLayout>
